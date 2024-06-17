@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esmeraldo</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div>
+        <img src="Img/Imagen de WhatsApp 2024-06-06 a las 18.30.11_167b531b.jpg" height="150">
+    </div>
+    <div class="container">
+        <h1>Medir el Diámetro de un Anillo</h1>
+        <p>Coloca tu anillo sobre la pantalla y ajusta la escala si es necesario.</p>
+        <div class="calibration">
+            <label for="scale">Ajustar Escala (mm/píxel): </label>
+            <input type="number" id="scale" value="1" step="0.01">
+            <button onclick="drawCircle()">Aplicar</button>
+        </div>
+        <canvas id="canvas"></canvas>
+        <div class="slider">
+            <label for="diameter">Ajustar Diámetro (mm): </label>
+            <input type="range" id="diameter" min="1" max="100" value="20" oninput="drawCircle()">
+            <span id="diameterValue">20 mm</span>
+        </div>
+        <p>Coloca tu anillo sobre la cuadrícula y ajusta la circunferencia para medir el diámetro interno en milímetros.</p>
+    </div>
+    <script src="Paper.js"></script>
+</body>
+</html>
